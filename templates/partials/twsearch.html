@@ -1,0 +1,16 @@
+
+
+
+{% for tweet in tweets %}
+<div class="well">
+<span>{{ tweet.text }}</span>
+</div>
+{% endfor %}
+
+{% if not tweet %}
+<div class='well'>
+<span> No math found </span>
+
+</div>
+
+{% endif %}

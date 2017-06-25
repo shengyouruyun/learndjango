@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'user_profile',
+    'tweets',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,9 +86,22 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (BASE_DIR + '/static/',)
 
-TEMPLATE_DIRS = (BASE_DIR + '/templates/')
+TEMPLATE_DIRS = (BASE_DIR + '/templates/',)
 
 TEMPLATE_LOADERS = (
 'django.template.loaders.filesystem.Loader',
 'django.template.loaders.app_directories.Loader',
 )
+
+LOGIN_REDIRECT_URL = '/profile'
+LOGIN_URL = 'django.contrib.auth.views.login'
+
+
+SITE_HOST = '127.0.0.1:8000'
+DEFAULT_FROM_EMAIL = 'wangshenganlu1990@126.com'
+EMAIL_HOST = 'smtp.126.com'
+EMAIL_PORT = ''
+EMAIL_HOST_USER = 'wangshenganlu1990@126.com'
+EMAIL_HOST_PASSWORD = '520360'
+
+
