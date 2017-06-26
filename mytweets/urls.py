@@ -3,7 +3,10 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 #from tweets import views
-from tweets.views import Index, Profile, PostTweet, HashTagCloud, Search, UserRedirect, MostFollowedUsers, TestEmail
+from tweets.views import Index, Profile, PostTweet, HashTagCloud, Search,\
+ UserRedirect, MostFollowedUsers, TestEmail
+
+from user_profile.views import Invite
 
 admin.autodiscover()
 

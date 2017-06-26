@@ -105,3 +105,4 @@ EMAIL_HOST_USER = 'wangshenganlu1990@126.com'
 EMAIL_HOST_PASSWORD = '520360'
 
 
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'

@@ -31,7 +31,7 @@ class Profile(View):
 	#form = TweetForm()
 	def get(self, request, username):
 
-		user = session['username']
+		user = request.GET.get('username')
 		form = TweetForm()
 		params = dict()
 		userProfile = User.objects.get(username=username)
@@ -51,17 +51,17 @@ class Profile(View):
 		params['form'] = form
 		#params['search'] = search_form
 		return render(request, 'user_profile.html', params)
-	# def post(self, request, username):
-	# 	follow = request.POST['following']
-	# 	print follow 
-	# 	user = User.objects.get(username=request.user.username)
-	# 	userProfile = User.objects.get(username=username)
-	# 	userFollower, status = UserFollower.objects.get_or_create(user=userProfile)
-	# 	if follow == 'true':
-	# 		userFollower.followers.add(user)
-	# 	else:
-	# 		userFollower.followers.remove(user)
-	# 	return HttpResponse(json.dumps(""), content_type='application/json')
+	def post(self, request, username):
+		follow = request.POST['following']
+		print follow 
+		user = User.objects.get(username=request.user.username)
+		userProfile = User.objects.get(username=username)
+		userFollower, status = UserFollower.objects.get_or_create(user=userProfile)
+		if follow == 'true':
+			userFollower.followers.add(user)
+		else:
+			userFollower.followers.remove(user)
+		return HttpResponse(json.dumps(""), content_type='application/json')
 
 
 
