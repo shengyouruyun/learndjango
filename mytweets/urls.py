@@ -27,7 +27,8 @@ urlpatterns = patterns('',
     url(r'^profile/$', UserRedirect.as_view()),
     url(r'^mostFollowers/$', MostFollowedUsers.as_view()),
     url(r'^email/$',TestEmail.as_view()),
-    url(r'^invite/$', Invite.as_view())    
+    url(r'^invite/$', Invite.as_view()), 
+    url(r'^invite/accept/(\w+)/$', InviteAccept.as_view()),    
 )
 
 
