@@ -6,7 +6,7 @@ from django.contrib import admin
 from tweets.views import Index, Profile, PostTweet, HashTagCloud, Search,\
  UserRedirect, MostFollowedUsers, TestEmail
 
-from user_profile.views import Invite
+from user_profile.views import Invite,InviteAccept
 
 admin.autodiscover()
 
@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     url(r'^search/$', Search.as_view()),
 
     url(r'^login/$', 'django.contrib.auth.views.login'),
+    
     url(r'^logout/$', 'django.contrib.auth.views.logout'),
     url(r'^profile/$', UserRedirect.as_view()),
     url(r'^mostFollowers/$', MostFollowedUsers.as_view()),
