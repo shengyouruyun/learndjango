@@ -43,7 +43,7 @@ javascriptcore==0.3
 keyring==10.4.0
 keyrings.alt==2.2
 Kivy==1.9.1
-lxml==3.8.0
+lxml==4.6.3
 Markdown==2.6.8
 matplotlib==2.0.0
 mechanize==0.2.5
