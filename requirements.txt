@@ -104,7 +104,7 @@ six==1.10.0
 static3==0.6.1
 subprocess32==3.2.7
 traitlets==4.3.2
-Twisted==17.1.0
+Twisted==22.10.0
 urllib3==1.19.1
 uTidylib==0.3
 virtualenv==15.1.0
